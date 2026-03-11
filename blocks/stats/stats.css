@@ -1,0 +1,66 @@
+/* Stats block — counter/stats section */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Each stat row becomes a card-like item */
+.stats .stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon */
+.stats .stats-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats .stats-icon img,
+.stats .stats-icon .icon,
+.stats .stats-icon .icon svg {
+  width: 55px;
+  height: 55px;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(90%) saturate(5000%) hue-rotate(350deg) brightness(95%) contrast(95%);
+}
+
+/* Number */
+.stats .stats-number {
+  font-size: 39px;
+  font-weight: 700;
+  color: #ea1d22;
+  line-height: 1.2;
+  margin: 4px 0;
+}
+
+/* Label */
+.stats .stats-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0e0e0e;
+  line-height: 1.4;
+}
+
+/* Tablet: 2 columns */
+@media (width >= 600px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 30px;
+  }
+}
+
+/* Desktop: 4 columns */
+@media (width >= 900px) {
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 20px;
+  }
+}

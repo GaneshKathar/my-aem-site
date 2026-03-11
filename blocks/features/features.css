@@ -1,0 +1,90 @@
+/* Features block - 4-column numbered feature card layout */
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 40px 0;
+}
+
+/* Tablet: 2 columns */
+@media (width >= 600px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 4 columns */
+@media (width >= 900px) {
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card */
+.features .features-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-bottom: 3px solid transparent;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.features .features-card:hover {
+  border-bottom-color: #d4a843;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+  transform: translateY(-4px);
+}
+
+/* Numbered counter circle */
+.features .features-card-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ea1d22;
+  border-radius: 50%;
+  color: #ea1d22;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* Icon */
+.features .features-card-icon {
+  margin-bottom: 16px;
+}
+
+.features .features-card-icon img {
+  width: 65px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Title */
+.features .features-card-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: #0e0e0e;
+  margin-bottom: 12px;
+}
+
+/* Description */
+.features .features-card-description {
+  font-size: 15px;
+  color: #747478;
+  line-height: 1.6;
+}
+
+.features .features-card-description p {
+  margin: 0;
+}
