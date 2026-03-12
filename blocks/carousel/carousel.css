@@ -2,11 +2,14 @@
 .carousel-wrapper {
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .carousel-wrapper .carousel-container {
-  max-width: none;
+  max-width: 100%;
   padding: 0;
+  width: 100%;
 }
 
 .carousel .carousel-slides-container {
@@ -155,20 +158,9 @@
   border-color: var(--accent-color, #ea1d22);
 }
 
-/* slide indicators (dots) */
+/* slide indicators (dots) — hidden */
 .carousel .carousel-slide-indicators {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px 12px;
-  padding: 16px;
-  background-color: transparent;
-  position: absolute;
-  bottom: 24px;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  line-height: 0;
+  display: none;
 }
 
 .carousel .carousel-slide-indicator button {
