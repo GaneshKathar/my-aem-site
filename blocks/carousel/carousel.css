@@ -1,15 +1,18 @@
+/* stylelint-disable no-descending-specificity */
+
 /* === Carousel / Hero Slider === */
 .carousel-wrapper {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   width: 100%;
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .carousel-wrapper .carousel-container {
-  max-width: 100%;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   width: 100%;
+  max-width: 100% !important;
 }
 
 .carousel .carousel-slides-container {
@@ -198,7 +201,6 @@
   z-index: 3;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .carousel .carousel-navigation-buttons button {
   position: relative;
   width: 50px;
