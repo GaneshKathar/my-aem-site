@@ -60,10 +60,7 @@
   background-color: var(--background-color);
 }
 
-/* ==============================
-   FAQ-SECTION accordion overrides
-   Bottom border only, red on open
-   ============================== */
+/* faq-section */
 .faq-section .accordion details {
   border: none;
   border-bottom: 1px solid #e0e0e0;

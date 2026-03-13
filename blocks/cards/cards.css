@@ -1,6 +1,6 @@
 /* stylelint-disable no-descending-specificity */
 
-/* === Cards Base === */
+/* cards-base */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -29,10 +29,7 @@
   object-fit: cover;
 }
 
-/* ==============================
-   FEATURES variant — cards (features)
-   4 numbered icon cards in a row
-   ============================== */
+/* features-cards */
 .features-cards .cards > ul {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -56,7 +53,6 @@
   justify-content: center;
 }
 
-/* bottom border animation using ::after */
 .features-cards .cards > ul > li::after {
   content: '';
   position: absolute;
@@ -83,7 +79,6 @@
   color: var(--accent-color, #ea1d22);
 }
 
-/* numbered badge (01, 02, 03, 04) — inline next to icon */
 .features-cards .cards > ul > li::before {
   content: counter(feature-counter, decimal-leading-zero);
   position: absolute;
@@ -126,10 +121,7 @@
   line-height: 1.6;
 }
 
-/* ==============================
-   STATS section — cards
-   Icon left, number + label right
-   ============================== */
+/* stats */
 .stats .cards > ul {
   grid-template-columns: 1fr;
   gap: 20px;
@@ -169,7 +161,6 @@
   margin: 0;
 }
 
-/* flatten first p so picture + strong become grid items */
 .stats .cards .cards-card-body p:first-child {
   display: contents;
 }
@@ -178,13 +169,11 @@
   display: none;
 }
 
-/* icon — spans both rows in column 1 */
 .stats .cards .cards-card-body p:first-child picture {
   grid-column: 1;
   grid-row: 1 / 3;
 }
 
-/* number — row 1 column 2 */
 .stats .cards .cards-card-body p:first-child strong {
   grid-column: 2;
   grid-row: 1;
@@ -195,7 +184,6 @@
   line-height: 1.2;
 }
 
-/* label — row 2 column 2 */
 .stats .cards .cards-card-body p:last-child {
   grid-column: 2;
   grid-row: 2;
@@ -205,10 +193,7 @@
   margin: 2px 0 0;
 }
 
-/* ==============================
-   SERVICES variant — cards (services)
-   3x2 grid, gold top border, hover effect
-   ============================== */
+/* services */
 .cards.services > ul {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
@@ -283,7 +268,6 @@
   color: rgb(255 255 255 / 85%);
 }
 
-/* arrow button in services */
 .cards.services .cards-card-body .button-wrapper {
   margin-top: 20px;
 }
@@ -299,10 +283,7 @@
   justify-content: center;
 }
 
-/* ==============================
-   PRICING variant — cards (pricing)
-   3 pricing cards with feature lists
-   ============================== */
+/* pricing */
 .cards.pricing > ul {
   grid-template-columns: 1fr;
   gap: 30px;
@@ -335,7 +316,6 @@
   margin: 0;
 }
 
-/* price line: "29 $/Monthly" */
 .cards.pricing .cards-card-body p:first-child {
   font-size: 16px;
   color: var(--text-color);
@@ -350,7 +330,6 @@
   color: var(--text-color);
 }
 
-/* plan name: "Basic Plan" */
 .cards.pricing .cards-card-body p:nth-child(2) {
   display: inline-block;
   background: var(--accent-color);
@@ -362,7 +341,6 @@
   margin: 12px 0 24px;
 }
 
-/* feature list */
 .cards.pricing .cards-card-body ul {
   list-style: none;
   padding: 0;
@@ -385,13 +363,11 @@
   font-weight: 700;
 }
 
-/* strikethrough items */
 .cards.pricing .cards-card-body ul li del {
   color: var(--gray-color);
   text-decoration: line-through;
 }
 
-/* CTA button */
 .cards.pricing .cards-card-body .button-wrapper a.button {
   border-color: #e0e0e0;
   background: transparent;
@@ -413,10 +389,7 @@
   color: #fff;
 }
 
-/* ==============================
-   TEAM variant — cards (team)
-   Team member cards
-   ============================== */
+/* team */
 .cards.team > ul {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
@@ -465,10 +438,7 @@
   margin: 4px 0 0;
 }
 
-/* ==============================
-   BLOG variant — cards (blog)
-   Blog post cards
-   ============================== */
+/* blog */
 .cards.blog > ul {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
@@ -513,12 +483,7 @@
   line-height: 1.4;
 }
 
-/* ==============================
-   MARKETING-STATERGY section — cards
-   3x2 grid, gold top border, centered icon/title/desc + arrow button
-   ============================== */
-
-/* section header */
+/* marketing-statergy */
 .marketing-statergy .default-content-wrapper {
   text-align: center;
   margin-bottom: 40px;
@@ -537,7 +502,6 @@
   margin: 8px 0 0;
 }
 
-/* grid */
 .marketing-statergy .cards > ul {
   grid-template-columns: 1fr;
   gap: 30px;
@@ -559,7 +523,6 @@
   }
 }
 
-/* card */
 .marketing-statergy .cards > ul > li {
   border: none;
   background: #f9f9f9;
@@ -576,7 +539,6 @@
   box-shadow: 0 10px 30px rgb(0 0 0 / 15%);
 }
 
-/* icon */
 .marketing-statergy .cards .cards-card-image {
   display: flex;
   justify-content: center;
@@ -595,7 +557,6 @@
   filter: brightness(0) invert(1);
 }
 
-/* body */
 .marketing-statergy .cards .cards-card-body {
   margin: 0;
   display: flex;
@@ -626,7 +587,6 @@
   color: rgb(255 255 255 / 85%);
 }
 
-/* arrow button */
 .marketing-statergy .cards .cards-card-body .button-wrapper {
   margin-top: 20px;
   flex: 0;
@@ -649,12 +609,7 @@
   color: var(--accent-color);
 }
 
-/* ==============================
-   DIGITAL-MARKETING section — gallery
-   4-up image grid, hover overlay + red + button, nav arrows
-   ============================== */
-
-/* section header */
+/* digital-marketing */
 .digital-marketing .default-content-wrapper {
   text-align: center;
   margin-bottom: 40px;
@@ -673,12 +628,10 @@
   margin: 8px 0 0;
 }
 
-/* section — allow overflow so partial cards are visible */
 .digital-marketing {
   overflow: visible;
 }
 
-/* cards wrapper — stretch full viewport width */
 .digital-marketing .cards-wrapper {
   max-width: none;
   padding: 0;
@@ -690,7 +643,6 @@
   position: relative;
 }
 
-/* grid — single row, 5 equal columns with gap */
 .digital-marketing .cards > ul {
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
@@ -703,7 +655,6 @@
   }
 }
 
-/* card */
 .digital-marketing .cards > ul > li {
   border: none;
   background: transparent;
@@ -711,7 +662,6 @@
   overflow: visible;
 }
 
-/* image — fills card, portrait ratio */
 .digital-marketing .cards .cards-card-image {
   position: relative;
   overflow: hidden;
@@ -730,14 +680,13 @@
   transform: scale(1.05);
 }
 
-/* dark overlay on hover */
 .digital-marketing .cards .cards-gallery-overlay {
   position: absolute;
   inset: 0;
   background: rgb(14 14 14 / 50%);
   display: flex;
   align-items: end;
-  
+
   justify-content: center;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -747,7 +696,6 @@
   opacity: 1;
 }
 
-/* red + button */
 .digital-marketing .cards .cards-gallery-btn {
   width: 52px;
   height: 52px;
@@ -770,7 +718,6 @@
   background: var(--link-hover-color);
 }
 
-/* card body */
 .digital-marketing .cards .cards-card-body {
   padding: 16px 0;
   text-align: center;
@@ -788,12 +735,7 @@
   margin: 0;
 }
 
-/* ==============================
-   PRICING section — cards
-   3 pricing cards with arrow feature list
-   ============================== */
-
-/* section header */
+/* pricing-section */
 .pricing .default-content-wrapper {
   text-align: center;
   margin-bottom: 40px;
@@ -812,7 +754,6 @@
   margin: 8px 0 0;
 }
 
-/* grid */
 .pricing .cards > ul {
   grid-template-columns: 1fr;
   gap: 30px;
@@ -824,7 +765,6 @@
   }
 }
 
-/* card */
 .pricing .cards > ul > li {
   border: 1px solid #e8e8e8;
   border-radius: 8px;
@@ -842,7 +782,6 @@
   margin: 0;
 }
 
-/* price */
 .pricing .cards .cards-price {
   margin: 0 0 16px;
 }
@@ -861,7 +800,6 @@
   color: var(--text-color);
 }
 
-/* plan name — red pill badge */
 .pricing .cards .cards-card-body h2 {
   display: inline-block;
   background: var(--accent-color);
@@ -879,7 +817,6 @@
   font-weight: inherit;
 }
 
-/* feature list */
 .pricing .cards .cards-card-body ul {
   list-style: none;
   padding: 0;
@@ -902,12 +839,10 @@
   margin-right: 12px;
 }
 
-/* strikethrough items */
 .pricing .cards .cards-card-body ul li del {
   color: var(--gray-color);
 }
 
-/* CTA button — bordered by default */
 .pricing .cards .cards-card-body .button-wrapper a.button {
   border: 2px solid #e0e0e0;
   background: transparent;
@@ -924,19 +859,13 @@
   color: #fff;
 }
 
-/* middle card — red filled button */
 .pricing .cards > ul > li:nth-child(2) .button-wrapper a.button {
   background: var(--accent-color);
   border-color: var(--accent-color);
   color: #fff;
 }
 
-/* ==============================
-   TEAM-MEMBERS section — cards
-   3 team cards, portrait photo, name + role + social icons
-   ============================== */
-
-/* section header */
+/* team-members */
 .team-members .default-content-wrapper {
   text-align: center;
   margin-bottom: 40px;
@@ -955,7 +884,6 @@
   margin: 8px 0 0;
 }
 
-/* grid — 3 columns */
 .team-members .cards > ul {
   grid-template-columns: 1fr;
   gap: 30px;
@@ -967,7 +895,6 @@
   }
 }
 
-/* card — transparent, only image area is gray */
 .team-members .cards > ul > li {
   border: none;
   background: transparent;
@@ -976,7 +903,6 @@
   text-align: center;
 }
 
-/* photo — gray card with inner padding */
 .team-members .cards .cards-card-image {
   background: #f0f0f0;
   border-radius: 12px;
@@ -994,13 +920,11 @@
   border-radius: 8px 8px 0 0;
 }
 
-/* body — white area below the gray card */
 .team-members .cards .cards-card-body {
   padding: 20px 16px 8px;
   margin: 0;
 }
 
-/* name */
 .team-members .cards .cards-card-body h3 {
   font-size: 20px;
   font-weight: 700;
@@ -1008,14 +932,13 @@
   color: var(--text-color);
 }
 
-/* role */
 .team-members .cards .cards-card-body p {
   font-size: 14px;
   color: var(--accent-color);
   margin: 0 0 12px;
 }
 
-/* social icons row */
+/* team-social */
 .team-members .cards .team-social {
   display: flex;
   justify-content: center;
@@ -1042,4 +965,3 @@
   color: #fff;
   text-decoration: none;
 }
-

@@ -45,14 +45,13 @@ export default async function decorate(block) {
 
   block.prepend(tablist);
 
-  // marketing-tabs: 3-col layout (tabs | content | image) + progress bars
+  // marketing-tabs
   if (block.closest('.marketing-tabs')) {
     block.querySelectorAll('.tabs-panel > div').forEach((inner) => {
       const panel = inner.closest('.tabs-panel');
       const tabId = panel.getAttribute('aria-labelledby');
       const tabName = block.querySelector(`#${tabId}`)?.textContent.trim() || '';
 
-      // extract picture from its parent p
       const picture = inner.querySelector('picture');
       let imageCol = null;
       if (picture) {
@@ -68,11 +67,9 @@ export default async function decorate(block) {
         imageCol.append(picture, imgLabel);
       }
 
-      // convert progress bar paragraphs (those containing 2+ strongs)
       [...inner.querySelectorAll('p:not(.button-wrapper)')].forEach((p) => {
         const strongs = [...p.querySelectorAll('strong')];
         if (strongs.length < 2) return;
-        // split off leading description text if present
         const firstText = [...p.childNodes].find((n) => n.nodeType === 3 && n.textContent.trim());
         if (firstText) {
           const descP = document.createElement('p');
@@ -82,7 +79,6 @@ export default async function decorate(block) {
           const leadBr = p.firstChild;
           if (leadBr?.tagName === 'BR') leadBr.remove();
         }
-        // build one progress bar div per strong pair
         for (let i = 0; i + 1 < strongs.length; i += 2) {
           const bar = document.createElement('div');
           bar.className = 'tabs-progress';
@@ -92,7 +88,6 @@ export default async function decorate(block) {
         p.remove();
       });
 
-      // wrap remaining content in content col, append image
       const contentCol = document.createElement('div');
       contentCol.className = 'tabs-panel-content';
       while (inner.firstChild) contentCol.append(inner.firstChild);

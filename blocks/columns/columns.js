@@ -9,12 +9,11 @@ export default function decorate(block) {
       if (pic) {
         const picWrapper = pic.closest('div');
         if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
           picWrapper.classList.add('columns-img-col');
         }
       }
 
-      // convert markdown-style headings (## text) to real <h2> elements
+      // convert markdown-style headings
       col.querySelectorAll('p').forEach((p) => {
         const text = p.textContent.trim();
         const match = text.match(/^(#{1,6})\s+(.+)$/);
