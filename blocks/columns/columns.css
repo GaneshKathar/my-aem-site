@@ -210,7 +210,7 @@
   background-position: center;
   color: #fff;
   margin: 0;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 
 .expertise::before {
@@ -292,7 +292,7 @@
    display:contents flattens the columns block into the section grid
    ============================== */
 main > .faq-section {
-  padding: 80px 32px;
+  padding: 100px 32px;
   margin: 0 auto;
   max-width: 1200px;
 }
